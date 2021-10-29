@@ -6,23 +6,32 @@
 //
 
 import Foundation
+import UIKit
 
-// Variable, Constant, Static
+// Types
 
-var str = "Hello, World!"
-var x = 4
-var y = 1
+var x = 3
+var name = "Joe"
 
-y = 2
+// Type inference
+var lastName: String = "last"
+let age: Int = 22
+let price: Double = 1.99
+var height: Float = 200.2425522525
 
-let z = 3
-// z = 12 // Cannot do this! this is a constant
+// lastName = 2 // Cannot do this!
 
-// Static constants
+type(of: name)
+
 class Person {
-    static let dave = Person() // Static constant
+    
 }
 
-var john = Person()
-let dave = Person.dave
+var John: Person = Person()
+type(of: John)
 
+var button1: UIButton = UIButton()
+type(of: button1)
+
+var isComplete: Bool = false // Type inference can be only written in initializing
+isComplete = true
