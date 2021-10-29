@@ -7,9 +7,22 @@
 
 import Foundation
 
-// Ternary Operator
+// Math Functions
 
-func isBiggerThanFive(number: Int) -> Bool {
-    return number > 5 ? true : false
+var x = 30
+var y = 7
+
+var result = x + y
+var result1 = x - y
+var result2 = x * y
+var result3 = x / y
+var result4 = x % y
+
+func add(x: Int, y: Int) -> Int {
+    let result = x + y
+    if result > 10 {
+        return 0
+    }
+    add(x: result, y: 1)
+    return 0
 }
-
