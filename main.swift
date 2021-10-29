@@ -6,36 +6,36 @@
 //
 
 import Foundation
-import UIKit
 
-// Enums and Switch statements
+// Protocols
 
-// It can inherits types
-enum States: String {
-    case InProgress = "1", Aborted, Complete, WillStart
+// Basically is an interface
+protocol CarProto {
+    var color: String { get set }
+    
+    func drive()
+    func isAllWheelDrive() -> Bool
 }
 
-var current = States.InProgress
+// Naming convention: XDelegate (user interactions), XDataSource (data)
 
-var curr: States?
-curr = .InProgress
+class Car {
+    
+}
 
-var color: UIColor?
-color = .blue
-
-func checkState(){
-    switch current {
-    case .InProgress:
-        // Show info form
-        print("here")
-        break
-    case .Aborted:
-        break
-    case .Complete:
-        break
-    case .WillStart:
-        break
+class BMW: Car, CarProto {
+    var color: String
+    
+    init(color: String) {
+        self.color = color
     }
+    
+    func drive() {
+        
+    }
+    
+    func isAllWheelDrive() -> Bool {
+        return true
+    }
+    
 }
-
-checkState()
