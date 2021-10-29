@@ -7,32 +7,32 @@
 
 import Foundation
 
-// Funcs and Parameters
+// Classes and Structs
 
-func myFirstFunction() {
+class Vehicle {
     
 }
 
-func addTwoNumbers(a: Int, b: Int) -> Int {
-    return a + b
-}
-
-func squareNumber(number: Int) -> Int {
-    return number * number
-}
-
-var x = 3
-var y = 7
-
-let sum = addTwoNumbers(a: x, b: y)
-let squareSum = squareNumber(number: sum)
-
-func isEven(number: Int) -> Bool {
-    if number % 2 == 0 {
-        return true
+// Inheritance can be applied only for classes (not structs)
+class Car: Vehicle {
+    let make: String
+    let color: String
+    
+    var model = ""
+    
+    func drive() {
+        
     }
-    return false
+    
+    // Initializer
+    init(make: String, color: String) {
+        self.color = color
+        self.make = make
+    }
+    
 }
 
-isEven(number: sum)
-isEven(number: sum - 1)
+var bmw = Car(make: "bmw", color: "blue")
+
+// Class is reference type, and Struct is value type
+// Struct variables create a copy of structs, classes will not create a copy of another object but point to it
