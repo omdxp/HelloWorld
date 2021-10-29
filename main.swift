@@ -6,29 +6,36 @@
 //
 
 import Foundation
+import UIKit
 
-// Guard Statements
+// Enums and Switch statements
 
-func numberLargerThanFive(number: Int) -> Bool {
-    // If number is greater than 5 continue to the rest of the function
-    guard number > 5, number > 4 else {
-        return false
+// It can inherits types
+enum States: String {
+    case InProgress = "1", Aborted, Complete, WillStart
+}
+
+var current = States.InProgress
+
+var curr: States?
+curr = .InProgress
+
+var color: UIColor?
+color = .blue
+
+func checkState(){
+    switch current {
+    case .InProgress:
+        // Show info form
+        print("here")
+        break
+    case .Aborted:
+        break
+    case .Complete:
+        break
+    case .WillStart:
+        break
     }
-    return true
 }
 
-var text: String? // nil by default
-text = "hello world"
-
-if let value = text {
-    print(value)
-}
-
-func printValue() {
-    guard let value = text else {
-        return
-    }
-    print(value)
-}
-
-printValue()
+checkState()
