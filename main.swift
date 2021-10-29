@@ -7,28 +7,9 @@
 
 import Foundation
 
-// Typealias
+// Ternary Operator
 
-typealias Code = String
-
-var code: Code = ""
-
-func validateCode(code: Code) {
-    
+func isBiggerThanFive(number: Int) -> Bool {
+    return number > 5 ? true : false
 }
 
-validateCode(code: code)
-
-typealias Address = [String: String]
-
-var address: Address = ["": ""]
-
-func validateAddress(address: Address) {
-    
-}
-
-typealias PromoCodeValidationFunction = ((String) -> (Bool))?
-
-var validateFunction: PromoCodeValidationFunction
-
-var validateFunction2: PromoCodeValidationFunction
