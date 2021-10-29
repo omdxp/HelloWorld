@@ -7,13 +7,23 @@
 
 import Foundation
 
-// Strong vs Weak
+// Closures / Lambda
 
-// strong is by default
-var str = "jsdsjsjdskj"
-
-class Child {
-    var baloon = "str"
+var myFunction: ((Int) -> (Void))? = {number in
+    if number > 3 {
+       
+    }
 }
 
-weak var joe = Child()
+if let myRealFunc = myFunction {
+    myRealFunc(3)
+}
+
+func isGreaterThanThree(number: Int) -> Bool {
+    if number > 3 {
+        return true
+    }
+    return false
+}
+
+isGreaterThanThree(number: 4)
