@@ -7,22 +7,17 @@
 
 import Foundation
 
-// Math Functions
+// Searching
 
-var x = 30
-var y = 7
+var numbers: [Int] = [1, 2, 3, 4, 5, 12, 13, 3, 5]
 
-var result = x + y
-var result1 = x - y
-var result2 = x * y
-var result3 = x / y
-var result4 = x % y
-
-func add(x: Int, y: Int) -> Int {
-    let result = x + y
-    if result > 10 {
-        return 0
+func isNumberInArray(number: Int, array: [Int]) -> Bool {
+    for x in array {
+        if x == number {
+            return true
+        }
     }
-    add(x: result, y: 1)
-    return 0
+    return false
 }
+
+let result = isNumberInArray(number: 3, array: numbers)
