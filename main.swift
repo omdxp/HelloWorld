@@ -7,14 +7,28 @@
 
 import Foundation
 
-// Naming Conventions
+// Typealias
 
-var number_of_bank_accounts = ""
-var numberOfBankAccounts = ""
+typealias Code = String
 
-func is_larger_than_five(){}
-func isLargerThanFive(){}
+var code: Code = ""
 
-class BigPerson {}
+func validateCode(code: Code) {
+    
+}
 
-var joe = BigPerson()
+validateCode(code: code)
+
+typealias Address = [String: String]
+
+var address: Address = ["": ""]
+
+func validateAddress(address: Address) {
+    
+}
+
+typealias PromoCodeValidationFunction = ((String) -> (Bool))?
+
+var validateFunction: PromoCodeValidationFunction
+
+var validateFunction2: PromoCodeValidationFunction
