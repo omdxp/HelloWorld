@@ -7,23 +7,12 @@
 
 import Foundation
 
-// Closures / Lambda
+// Strings
 
-var myFunction: ((Int) -> (Void))? = {number in
-    if number > 3 {
-       
-    }
-}
+var first: String = "Steve"
+var last: String = "Jobs"
+var number: Int = 1
 
-if let myRealFunc = myFunction {
-    myRealFunc(3)
-}
-
-func isGreaterThanThree(number: Int) -> Bool {
-    if number > 3 {
-        return true
-    }
-    return false
-}
-
-isGreaterThanThree(number: 4)
+// Strings interpolation
+let fullname = "My name is \(first) \(last) and I am number \(number)"
+print(fullname)
