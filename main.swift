@@ -7,20 +7,24 @@
 
 import Foundation
 
-// Optionals
+// Conditionals
 
-var name: String? = "Joe"
-type(of: name)
-name = nil
+var x = 19
 
-var x: Int? = 3
-var y: Int? = 12
-
-// Unwrapping optionals
-if let value = x {
-    if let value2 = y {
-        let result = value + value2
-        print(result)
-    }
+if x > 20 {
     
+} else if x > 10 {
+    
+} else {
+    // Something else
+}
+
+var y: Int? = nil
+
+if let value = y {
+    // Use value in here
+    
+    if x > 10 && value < 100 {
+        
+    }
 }
