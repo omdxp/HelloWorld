@@ -7,32 +7,17 @@
 
 import Foundation
 
-// Classes and Structs
+// Loops
 
-class Vehicle {
-    
+let numbers = [1, 2, 3, 4, 5, 6]
+
+for n in numbers {
+    let result = n * 2
+    print(result)
 }
 
-// Inheritance can be applied only for classes (not structs)
-class Car: Vehicle {
-    let make: String
-    let color: String
-    
-    var model = ""
-    
-    func drive() {
-        
-    }
-    
-    // Initializer
-    init(make: String, color: String) {
-        self.color = color
-        self.make = make
-    }
-    
+var n = 0
+while n < numbers.count {
+    print(numbers[n])
+    n += 1
 }
-
-var bmw = Car(make: "bmw", color: "blue")
-
-// Class is reference type, and Struct is value type
-// Struct variables create a copy of structs, classes will not create a copy of another object but point to it
