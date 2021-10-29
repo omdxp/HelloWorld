@@ -7,17 +7,20 @@
 
 import Foundation
 
-// Loops
+// Optionals
 
-let numbers = [1, 2, 3, 4, 5, 6]
+var name: String? = "Joe"
+type(of: name)
+name = nil
 
-for n in numbers {
-    let result = n * 2
-    print(result)
-}
+var x: Int? = 3
+var y: Int? = 12
 
-var n = 0
-while n < numbers.count {
-    print(numbers[n])
-    n += 1
+// Unwrapping optionals
+if let value = x {
+    if let value2 = y {
+        let result = value + value2
+        print(result)
+    }
+    
 }
