@@ -6,32 +6,33 @@
 //
 
 import Foundation
-import UIKit
 
-// Types
+// Funcs and Parameters
 
-var x = 3
-var name = "Joe"
-
-// Type inference
-var lastName: String = "last"
-let age: Int = 22
-let price: Double = 1.99
-var height: Float = 200.2425522525
-
-// lastName = 2 // Cannot do this!
-
-type(of: name)
-
-class Person {
+func myFirstFunction() {
     
 }
 
-var John: Person = Person()
-type(of: John)
+func addTwoNumbers(a: Int, b: Int) -> Int {
+    return a + b
+}
 
-var button1: UIButton = UIButton()
-type(of: button1)
+func squareNumber(number: Int) -> Int {
+    return number * number
+}
 
-var isComplete: Bool = false // Type inference can be only written in initializing
-isComplete = true
+var x = 3
+var y = 7
+
+let sum = addTwoNumbers(a: x, b: y)
+let squareSum = squareNumber(number: sum)
+
+func isEven(number: Int) -> Bool {
+    if number % 2 == 0 {
+        return true
+    }
+    return false
+}
+
+isEven(number: sum)
+isEven(number: sum - 1)
