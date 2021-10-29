@@ -7,20 +7,16 @@
 
 import Foundation
 
-// Arrays and Dictionaries
+// Numbers
 
-var names: [Any] = [1, 2, 3, "Joe", "Smith", 1.23]
+var a: Int = 1 // Int
+var b: Double = 1.00 // Double
+var c: Float = 1.0000000000001 // Float
 
-for name in names {
-    print(name)
-}
+var result = a + Int(b)
+var result2 = Double(a) + b
 
-var cars: [String: Int] = ["bmw": 3, "Honda": 1, "Lexus": 12]
-
-for car in cars.keys {
-    print(car)
-}
-
-for (key, value) in cars {
-    print("\(key) -> \(value)")
+var x: Int? = 1
+if let value = x {
+    print(value)
 }
