@@ -7,35 +7,13 @@
 
 import Foundation
 
-// Protocols
+// Strong vs Weak
 
-// Basically is an interface
-protocol CarProto {
-    var color: String { get set }
-    
-    func drive()
-    func isAllWheelDrive() -> Bool
+// strong is by default
+var str = "jsdsjsjdskj"
+
+class Child {
+    var baloon = "str"
 }
 
-// Naming convention: XDelegate (user interactions), XDataSource (data)
-
-class Car {
-    
-}
-
-class BMW: Car, CarProto {
-    var color: String
-    
-    init(color: String) {
-        self.color = color
-    }
-    
-    func drive() {
-        
-    }
-    
-    func isAllWheelDrive() -> Bool {
-        return true
-    }
-    
-}
+weak var joe = Child()
