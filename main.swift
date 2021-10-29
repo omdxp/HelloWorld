@@ -6,9 +6,15 @@
 //
 
 import Foundation
-import StoreKit
-import UIKit
 
-// Frameworks and Libraries
+// Naming Conventions
 
-let button = UIButton()
+var number_of_bank_accounts = ""
+var numberOfBankAccounts = ""
+
+func is_larger_than_five(){}
+func isLargerThanFive(){}
+
+class BigPerson {}
+
+var joe = BigPerson()
