@@ -7,12 +7,20 @@
 
 import Foundation
 
-// Strings
+// Arrays and Dictionaries
 
-var first: String = "Steve"
-var last: String = "Jobs"
-var number: Int = 1
+var names: [Any] = [1, 2, 3, "Joe", "Smith", 1.23]
 
-// Strings interpolation
-let fullname = "My name is \(first) \(last) and I am number \(number)"
-print(fullname)
+for name in names {
+    print(name)
+}
+
+var cars: [String: Int] = ["bmw": 3, "Honda": 1, "Lexus": 12]
+
+for car in cars.keys {
+    print(car)
+}
+
+for (key, value) in cars {
+    print("\(key) -> \(value)")
+}
